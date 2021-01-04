@@ -1,6 +1,4 @@
 <?php 
-
-
 class Cars{
     public $fare;
         function __construct($distance,$fare,$f1,$f2,$f3,$f4){
@@ -15,12 +13,10 @@ class Cars{
         }
         elseif( $distance>160){
               $this->fare=$fare+10*$f1+50*$f2+100*$f3+($distance-160)*$f4;          
-        }
-      
+        }      
     }
 
-    function myLuggage($weight,$pickup,$drop,$car,$distance){
-      
+    function myLuggage($weight,$pickup,$drop,$car,$distance){     
        $fare=$this->fare;
         if($weight!=0 && $weight<=10){
             if($car=="CedSUV"){
@@ -46,28 +42,27 @@ class Cars{
                 $fare=$fare+200;
             }  
         }
-       
+        if($pickup=="Indira_Nagar"){
+            $pickup="Indira Nagar";
+        }
+        if($drop=="Indira_Nagar"){
+            $drop="Indira Nagar";
+        }     
         echo"
         <table>
         <tr><th>PICKUP:</th><td class='output'>$pickup</td></tr>
         <tr><th>DROP:</th><td class='output'>  $drop</td></tr>
         <tr><th>CAB TYPE:</th><td class='output'>  $car</td></tr>
         <tr><th>DISTANCE:</th><td class='output'> $distance</td></tr>
-        <tr><th>LUGGAGE:</th><td class='output'>  $weight</td></tr>
+        <tr><th>LUGGAGE:</th><td class='output'>  $weight KG</td></tr>
         <tr><th>TOTAl FARE:</th><td class='output'>  $fare</td></tr>
         </table>
         ";
-
-    }
-   
+    }  
 }
-
-
-
-
 $loc=[
     'Charbagh'=>0,
-    'Indira Nagar'=>10,
+    'Indira_Nagar'=>10,
     'BBD'=>30,
     'Barabanki'=>60,
     'Faizabad'=>100,
@@ -85,7 +80,6 @@ if($weight==""){
 }
 
 $distance= abs($loc[$pickup]-$loc[$drop]);
-
 switch($car){
     case "CedMicro":
         $fare=50; $f1=13.50;$f2=12;  $f3=10.20; $f4=8.50;
@@ -111,13 +105,4 @@ switch($car){
         $obj->myLuggage($weight,$pickup,$drop,$car,$distance);
     break;
 }
-
-
-
-
-
-
-
-
-
 ?>

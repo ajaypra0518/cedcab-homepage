@@ -4,308 +4,149 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <title>Ola Cab</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
-    .backimg {
-        background-image: url("ola.jpg");
-        /* background-position: center; */
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: auto;
-        padding-bottom:47.3px
-            
-
-    }
-
-    .mhead {
-        color: white;
-        font-weight: bold;
-    }
-
-    .phead {
-        color: white;
-        font-size: 25px;
-    }
-
-
-    .frm {
-        background-color: white;
-        border-radius: 5px;
-        border: 1px solid black;
-        margin-top:50px;
-    
-       
-
-
-    }
-
-    .ctaxi {
-        display: inline-block;
-        padding: 3px 10px;
-        background-color: #CDDC39;
-        margin-top: 15px;
-        margin-bottom: 15px;
-        border-radius: 15px;
-        font-size: 14px;
-        font-weight: bold;
-    }
-
-    .tpartner {
-        text-align: center;
-        display: block;
-        font-weight: bold;
-        padding-top: 12px;
-        font-size: 18px;
-
-    }
-
-    .accabs {
-        text-align: center;
-        display: block;
-        font-size: 16px;
-        padding-bottom: 5px;
-
-    }
-
-
-    select {
-        border: 0px;
-        outline: 0px;
-        margin-left: 15px;
-        width: auto;
-        scroll-behavior: smooth;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        text-indent: 1px;
-        text-overflow: '';
-        background: #e2e2e2;
-    }
-
-    .select {
-
-        padding: 10px 7px;
-        padding-right: 0;
-        border-radius: 5px;
-        margin: 10px 0;
-        background: #e2e2e2;
-    }
-
-    .weight {
-        border: 0px;
-        outline: 0px;
-        /* margin-left: 45px; */
-        background: #e2e2e2;
-    
-
-    }
-
-    .dropname {
-        font-size: 11px;
-        color: #898989;
-    }
-
-    .btn1 {
-        border: 0px;
-        outline: 0px;
-        background-color: #CDDC39;
-    }
-
-    .output {
-        padding-left: 50px !important;
-    }
-    @media only screen and (max-width: 1025px) {
-  .weight{
-    width:80%;
-  }
-  select{
-      font-size:13.5px;
-  }
-  
- 
+    .error1 {
+  display: inline;
+  margin-bottom: 0;
+   color:red;
 }
-@media only screen and (max-width: 768px) {
-  .backimg{
-      background:white;
-  }
-  .phead,.mhead{
-      color:black;
-  }
+.navtogg{
+    outline-color:#CDDC39 !important;
 }
 
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-input[type=number] {
-  -moz-appearance: textfield;
-}
 
 </style>
 
 <body>
-    <div class="container-fluid  px-0 backimg">
+      <!---------------------------header----------------------------->
+    <?php include "header.php"; ?>
+      <!---------------------------header----------------------------->
 
-        <div class="container show1">
-            <div class="row  text-center pt-5">
+    <div class="container-fluid  px-0 backimg">
+        <div class="row mx-0 pt-4">
+            <div class="container text-center ">
                 <h1 class="mhead">Book a City Taxi to your destination in town</h1>
                 <p class="phead"> Choose from a range of categories and prices</p>
             </div>
         </div>
+
         <div class="container-fluid ">
-            <div class="row">
-                <div class="col-lg-4 col-md-5 col-sm-12 col-xs-12 ">
-                    <form class="frm px-2" id="frm">
-                        <div class=" text-center "><span class="ctaxi">CITY TAXI</span></div>
-                        <div style="border-bottom: 1px solid rgba(0, 0, 0, 0.336); "></div>
-                        <label class="tpartner">Your everyday travel partner</label>
-                        <label class="accabs">AC Cabs for point to point travel</label>
+            <div class="container">
+                <div class="row">
+                    <div class="myclass1 col-sm-12 col-xs-12 ">
+                        <form class="frm px-2" id="frm">
+                            <div class=" text-center "><span class="ctaxi">CITY TAXI</span></div>
+                            <div style="border-bottom: 1px solid rgba(0, 0, 0, 0.336); "></div>
+                            <label class="tpartner">Your everyday travel partner</label>
+                            <label class="accabs">AC Cabs for point to point travel</label>
 
-                        <div class="select">
-                            <span class="dropname">PICKUP</span>
-                            <select name="pickup" id="pickup"style="margin-left:8px;">
-                                <option selected hidden disabled >Current Location</option>
-                                <option value="Charbagh">Charbagh</option>
-                                <option value="Indira Nagar">Indira Nagar</option>
-                                <option value="BBD">BBD</option>
-                                <option value="Barabanki">Barabanki</option>
-                                <option value="Faizabad">Faizabad</option>
-                                <option value="Basti">Basti</option>
-                                <option value="Gorakhpur">Gorakhpur</option>
-                            </select>
-                        </div>
-                        
-
-                        <div class="select">
-                            <span class="dropname">DROP</span>
-                            <select name="drop" id="drop">
-                                <option selected hidden disabled>Drop Location</option>
-                                <option value="Charbagh">Charbagh</option>
-                                <option value="Indira Nagar">Indira Nagar</option>
-                                <option value="BBD">BBD</option>
-                                <option value="Barabanki">Barabanki</option>
-                                <option value="Faizabad">Faizabad</option>
-                                <option value="Basti">Basti</option>
-                                <option value="Gorakhpur">Gorakhpur</option>
-                            </select>
-                        </div>
-
-                        <div class="select">
-                            <span class="dropname" >CARS</span>
-                            <select name="cars" id="cars">
-                                <option selected hidden disabled>Choose Cab</option>
-                                <option value="CedMicro">CedMicro</option>
-                                <option value="CedMini">CedMini</option>
-                                <option value="CedRoyal">CedRoyal</option>
-                                <option value="CedSUV">CedSUV</option>
-                            </select>
-                        </div>
-                        <div class="select">
-                            <span class="dropname">WEIGHT</span>
-                            <input type="number" class="weight " placeholder="Enter Weight In KG" name="weight" id="weight">
-
-                        </div>
-                        <div id="error"></div>
-                        <input type="submit" class=" select btn1 col-12" value="Calculate Fare" name="submit"
-                            id="submit" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    </form>
-
-                </div>
-            </div>
-        </div>
+                            <div class="select">
+                                <span class="dropname">PICKUP</span>
+                                <select name="pickup" id="pickup" style="margin-left:8px; ">
+                                    <option selected hidden disabled>Current Location</option>
+                                    <option value="Charbagh">Charbagh</option>
+                                    <option value="Indira_Nagar">Indira Nagar</option>
+                                    <option value="BBD">BBD</option>
+                                    <option value="Barabanki">Barabanki</option>
+                                    <option value="Faizabad">Faizabad</option>
+                                    <option value="Basti">Basti</option>
+                                    <option value="Gorakhpur">Gorakhpur</option>
+                                </select>
+                            </div>
+                            <label for="pickup" generated="true" class="error error1"></label>
 
 
 
+                            <div class="select">
+                                <span class="dropname">DROP</span>
+                                <select name="drop" id="drop">
+                                    <option selected hidden disabled>Drop Location</option>
+                                    <option value="Charbagh">Charbagh</option>
+                                    <option value="Indira_Nagar">Indira Nagar</option>
+                                    <option value="BBD">BBD</option>
+                                    <option value="Barabanki">Barabanki</option>
+                                    <option value="Faizabad">Faizabad</option>
+                                    <option value="Basti">Basti</option>
+                                    <option value="Gorakhpur">Gorakhpur</option>
+                                </select>
+                            </div>
+                            <label for="drop" generated="true" class="error error1"></label>
 
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">FARE CALCULATION</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        ...
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">CANCEL</button>
-                        <button type="button" class="btn btn-success">BOOK</button>
+                            <div class="select">
+                                <span class="dropname">CARS</span>
+                                <select name="cars" id="cars">
+                                    <option selected hidden disabled>Choose Cab</option>
+                                    <option value="CedMicro">CedMicro</option>
+                                    <option value="CedMini">CedMini</option>
+                                    <option value="CedRoyal">CedRoyal</option>
+                                    <option value="CedSUV">CedSUV</option>
+                                </select>
+                            </div>
+                            <label for="cars" generated="true" class="error error1"></label>
+
+                            <div class="select">
+                                <span class="dropname">WEIGHT</span>
+                                <!-- <input type="number" class="weight" name="weight" id="weight"
+                                    placeholder="Enter Weight in KG" oninput="this.value = Math.abs(this.value)"
+                                    onKeyPress="if(this.value.length==3) return false;" max="999" min="0"
+                                    onpaste="return false;" data-error="errNm1" > -->
+
+                                    <input type="text" name="weight"  id="weight" class="weight"  oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+                                      onpaste="return false;"   placeholder="Enter Weight in KG" autocomplete="off" >
+                            </div>
+                            <label class="error1" id="abc"></label>
+                            <span ></span>
+
+                            <input type="submit" class=" select btn1 col-12" value="Calculate Fare" name="submit"
+                                id="submit" >
+                        </form>
+
                     </div>
                 </div>
             </div>
         </div>
-
-
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"></script>
-    <script>
-        $(document).ready(function () {
 
-            $('#cars').change(function(){
-            var cars = $('#cars').val();
-        
-            if(cars=="CedMicro"){
-                $('#weight').attr('readonly',true);
-            }
-            else{
-                $('#weight').attr('readonly',false);
-            }
-            });
+    <!-------------------------------------- Modal ------------------------------>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">BOOKING INFORMATION</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
 
-            // $("#pickup").change(function(){
-            // console.log(this.value);
-            // $(`#drop option[value*=${this.value}]`).hide();
-
-            $("#submit").click(function (e) {
-                e.preventDefault();
-
-                var pickup = $('#pickup').val();
-                var drop = $('#drop').val();
-                var cars = $('#cars').val();
-                
-                if(pickup==null && drop==null && cars==null){
-                    $(".modal-body").html("**All Fields Are Required");
-                }
-                else if(pickup==null || drop==null){
-                    $(".modal-body").html("Current or Drop Location is not Selected");
-                }
-                else if (pickup == drop) {
-                    $(".modal-body").html("Pickup and Drop location could not be same");
-                }
-                else if(cars==null){
-                    $(".modal-body").html("Cab Is Not Selected");
-                }
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">CLOSE</button>
+                    <button type="button" class="btn btn-success"> BOOK </button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
-                else{
-                    $.ajax({
-                        url: 'calculate.php',
-                        type: 'POST',
-                        data: $('#frm').serialize(),
-                        success: function (data) {
-                            console.log(data);
-                            $(".modal-body").html(data);
-
-                        }
-                    });
-                }
-                
-            });
-
-        });
-    </script>
+   <!---------------------------footer----------------------------->
+   <?php include "footer.php";?>
+     <!---------------------------footer----------------------------->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.min.js"></script>
+    <script src="project.js"></script>
 </body>
 
 </html>

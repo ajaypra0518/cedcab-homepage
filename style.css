@@ -1,0 +1,282 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+}
+
+.backimg {
+    background-image: url("images/ola.jpg");
+    background-size: cover;
+    height: auto;
+    padding-bottom: 47.3px
+}
+
+.mhead {
+    color: white;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    font-weight:500;
+}
+
+.phead {
+    color: white;
+    font-size: 25px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.frm {
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid black;
+    margin-top:20px;
+}
+
+.ctaxi {
+    display: inline-block;
+    padding: 3px 10px;
+    background-color: #CDDC39;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.tpartner {
+    text-align: center;
+    display: block;
+    font-weight: bold;
+    padding-top: 12px;
+    font-size: 18px;
+
+}
+
+.accabs {
+    text-align: center;
+    display: block;
+    font-size: 16px;
+    padding-bottom: 5px;
+
+}
+
+
+select {
+    border: 0px;
+    outline: 0px;
+    margin-left: 15px;
+    width: 85%;
+    scroll-behavior: smooth;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+    background: #e2e2e2;
+}
+
+.select {
+
+    padding: 10px 7px;
+    padding-right: 0;
+    border-radius: 5px;
+    margin: 10px 0;
+    background: #e2e2e2;
+}
+
+.weight {
+    border: 0;
+    outline: 0px;
+    background: #e2e2e2;
+    width: 80%;
+    margin-left: 2px
+}
+
+.dropname {
+    font-size: 11px;
+    color: #898989;
+}
+
+.btn1 {
+    border: 0px;
+    outline: 0px;
+    background-color: #CDDC39;
+}
+
+.output {
+    padding-left: 50px !important;
+}
+
+@media only screen and (max-width: 1025px) {
+
+    select {
+        font-size: 13.5px;
+    }
+
+    ::placeholder {
+        font-size: 13.5px;
+    }
+
+
+}
+
+@media only screen and (max-width: 768px) {
+    .backimg {
+        background: white;
+    }
+
+    .phead,
+    .mhead {
+        color: black;
+    }
+}
+
+@media (min-width: 769px) {
+    .myclass {
+        flex: 0 0 auto;
+        width: 35%;
+    }
+}
+
+
+@media (max-width: 1025px) {
+    select {
+        width: 81%;
+    }
+}
+
+@media (max-width: 769px) {
+    select {
+        width: 87%;
+    }
+}
+
+@media (max-width: 500px) {
+    select {
+        width: 80%;
+    }
+}
+
+@media (max-width: 350px) {
+    select {
+        width: 79%;
+    }
+}
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+
+@media (min-width: 992px)
+{
+.myclass1 {
+-webkit-box-flex: 0;
+-ms-flex: 0 0 41.666667%;
+flex: 0 0 41.666667%;
+max-width: 36.666667%;
+}
+}
+
+
+.mynav li{
+margin-right: 3rem;
+}
+.mynav li a{
+color:black;
+font-family: 'Montserrat', sans-serif;
+font-weight:400;
+}
+.mynav li a:hover{
+color:#CDDC39;
+}
+.navbtn{
+padding: 8px 22px;
+font-size:14px;
+border-radius:0;
+border:none ;
+color:black;
+background-color:#CDDC39;
+
+}
+.navbtn:hover{
+background-color:#b8c91d;
+color:black;
+
+}
+@media (max-width: 993px) {
+.mynav li{
+margin-right: 1rem;
+}
+}
+
+.mclass{
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+
+
+.favi {
+    padding: 18px;
+    font-size: 15px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    background-color: #000000c0;
+    color: white !important;
+    text-decoration: none;
+
+}
+.favi:hover{
+    background-color:  #CDDC39;
+}
+
+.footlink a {
+    color: #000000d8 !important;
+    padding-right: 1rem;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.footfavi i a{
+    margin-right: 1rem;
+
+}
+.footlink a:hover{
+    color:   #CDDC39 !important;
+}
+
+@media (max-width: 768px) {
+    .backimg{
+       padding-bottom: 0;
+    }
+   
+}
+
+@media (max-width: 992px) {
+.footlink{
+    padding-top:0 !important;
+}
+.footlogo{
+    margin-top:14px;
+}
+}
+
+
+
+
+
+
+
+
